@@ -1,4 +1,4 @@
-package com.example.demo.rest;
+package com.example.demo.bdd;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +17,8 @@ public class MyControllerTest {
 
     @Test
     public void testNewEndpoint() throws Exception {
-        mockMvc.perform(get("/newEndpoint")).andExpect(status().isOk()).andExpect(content().string("New endpoint response"));
+        mockMvc.perform(get("/newEndpoint"))
+                .andExpect(status().isOk()).andExpect(content()
+                        .string("New endpoint response"));
     }
 }
